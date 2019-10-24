@@ -6,9 +6,10 @@ public class main {
 
     public static void main(String[] args) {
         boolean primeNum = true;
+        String no = "n";
 
         Scanner key = new Scanner(System.in);
-
+        do {
             System.out.println("Would you like to generate a random number or input a number? (R/I)");
             String answer = key.next();
             if (answer.equalsIgnoreCase("i")) {
@@ -35,28 +36,29 @@ public class main {
                 Random r = new Random();
                 boolean prime = true;
 
-                int number = r.nextInt(250) ;
+                int number = r.nextInt(250);
                 System.out.println("Generated the random number: " + number);
 
                 if (number <= 1) {
                     prime = false;
                 }
 
-                for(int i = 2; i <= number / 2; i++)
-                {
-                    if(number % i == 0)
-                    {
+                for (int i = 2; i <= number / 2; i++) {
+                    if (number % i == 0) {
                         prime = false;
                         break;
                     }
                 }
 
-                if(prime)
+                if (prime)
                     System.out.println(number + " is a Prime Number");
                 else
                     System.out.println(number + " is not a Prime Number");
             } else {
                 System.out.println("Invalid answer");
-        }
-        }
+            }
+            System.out.println("Do you want to try again? (y/n)");
+            no = key.next();
+        } while (no.equalsIgnoreCase("y") || no.equalsIgnoreCase("yes"));
     }
+}
