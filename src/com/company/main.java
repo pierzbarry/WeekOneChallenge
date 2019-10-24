@@ -54,8 +54,6 @@ public class main {
                     System.out.println(number + " is a Prime Number");
                 else
                     System.out.println(number + " is not a Prime Number");
-            } else {
-                System.out.println("Invalid answer");
             }
             System.out.println("Do you want to try again? (y/n)");
             no = key.next();
