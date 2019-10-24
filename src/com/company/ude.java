@@ -1,5 +1,4 @@
 package com.company;
-
 import java.util.Random;
 
 public class ude{
@@ -7,7 +6,7 @@ public class ude{
             Random r = new Random();
             boolean prime = true;
 
-            int number = r.nextInt(2) ;
+            int number = r.nextInt(250) ;
             System.out.println("Generated the random number: " + number);
 
             if (number <= 1) {
